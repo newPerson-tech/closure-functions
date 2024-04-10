@@ -1,19 +1,16 @@
 /**Write a closure function that receives a value as a parameter, creates a counter and returns updated value every time its being called adding previous counter to new set value */
 
-
-//Declaring a closure function updateValue
 function updateValue() {
-    //counter - is a closure as it saves its value every time function was called
     let counter = 0;
 
-    //inner function does all the work
+    //inner function does all the work and is a closure to outer fucntion
     return function (value) {
         counter += value;
         return counter;
     };
 }
 
-//writing output of function call in a variable so its easy to use
+//writing output of function call in a variable so we can keep track of the counters
 const output = updateValue();
 
 console.log(output(5)); // Output: 5 (counter = 5)
